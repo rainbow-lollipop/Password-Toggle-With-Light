@@ -1,0 +1,122 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(0, 0, 0);
+}
+
+form {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputf {
+  width: 350px;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.input {
+  width: 100%;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 15px;
+  padding-right: 50px;
+  border: 0.6mm dashed #fff;
+  outline: none;
+  box-shadow: inset 0 0 0 2px #000;
+  background: transparent;
+  font-family: poppins;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.input:focus {
+  border-color: yellow;
+}
+
+.label {
+  font-family: poppins;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.inputf button {
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid black;
+  outline: none;
+  background: white;
+  color: black;
+  padding: 10px 30px;
+  font-family: poppins;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.inputf button:hover {
+  outline: 3px solid yellow;
+}
+
+.light {
+  position: absolute;
+  right: 20px;
+  bottom: 12px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.light span {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 26px;
+  color: white;
+}
+
+.beam {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  background: yellow;
+  width: 100vw;
+  height: 25vh;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  transition: 0.2s ease-out;
+  transform-origin: 100% 50%;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.beam.on {
+  max-height: 25vh;
+}

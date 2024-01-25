@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Effect Password Toggle</title>
+  <!-- Google fonts and icons -->
+  <link rel="stylesheet" href="./css/font1.css">
+  <!-- <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+    rel="stylesheet"
+  /> -->
+  <link 
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link 
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  /> -->
+  <link rel="stylesheet" href="./css/font2.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div class="center">
+    <form action="">
+      <span class="inputf">
+        <span class="label">Username</span>
+        <input type="text" class="input" />
+      </span>
+
+      <span class="inputf">
+        <span class="label">Password</span>
+        <input type="password" class="input" id="password" />
+        <div class="light">
+          <span 
+            class="material-icons-outlined"
+            onclick="toggleShowPassword(this)"
+          >
+            visibility_off
+          </span>
+          <div class="beam"></div>
+        </div>
+      </span>
+
+      <span class="inputf">
+        <button type="button">Sign In</button>
+      </span>
+    </form>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
